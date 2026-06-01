@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datacrate Motors</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+/* HEADER */
+/* CONTACT SECTION */
+.contact-section{
+    background:#0d1b2a;
+    color:white;
+    padding:60px 8%;
+    text-align:center;
+}
+
+.contact-section h2{
+    font-size:36px;
+    margin-bottom:30px;
+    color:#00b4d8;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.contact-card{
+    background:#1b263b;
+    padding:25px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+    background:#243447;
+}
+
+.contact-card h3{
+    margin-bottom:15px;
+    color:#00b4d8;
+}
+
+.contact-card p{
+    font-size:18px;
+}
+contact-section{
+    background:#0d1b2a;
+    color:white;
+    padding:60px 8%;
+    text-align:center;
+}
+
+.contact-section h2{
+    font-size:36px;
+    margin-bottom:30px;
+    color:#00b4d8;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.contact-card{
+    background:#1b263b;
+    padding:25px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+    background:#243447;
+}
+
+.contact-card h3{
+    margin-bottom:15px;
+    color:#00b4d8;
+}
+
+.contact-card p{
+    font-size:18px;
+}
+header{
+    background:#0d1b2a;
+    color:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    color:#00b4d8;
+    font-weight:bold;
+}
+
+/* FILTER SECTION */
+.filter-section{
+    padding:30px 8%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+/* DROPDOWN */
+.dropdown{
+    position:relative;
+    width:250px;
+}
+
+.dropdown-btn{
+    width:100%;
+    padding:12px;
+    background:#1b263b;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    text-align:left;
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    background:white;
+    width:100%;
+    max-height:250px;
+    overflow-y:auto;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-top:5px;
+    padding:10px;
+}
+
+.dropdown-content label{
+    display:block;
+    margin:5px 0;
+}
+
+/* CAR GRID */
+.cars-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:40px 8%;
+}
+
+.car-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.car-card:hover{
+    transform:scale(1.03);
+}
+
+.car-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.car-info{
+    padding:15px;
+}
+
+.price{
+    color:#00b4d8;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#1b263b;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.hidden{
+    display:none;
+}
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            color:#333;
+        }
+
+        /* HEADER */
+        /* CONTACT SECTION */
+.contact-section{
+    background:#0d1b2a;
+    color:white;
+    padding:60px 8%;
+    text-align:center;
+}
+
+.contact-section h2{
+    font-size:36px;
+    margin-bottom:30px;
+    color:#00b4d8;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.contact-card{
+    background:#1b263b;
+    padding:25px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+    background:#243447;
+}
+
+.contact-card h3{
+    margin-bottom:15px;
+    color:#00b4d8;
+}
+
+.contact-card p{
+    font-size:18px;
+}
+header{
+         background:linear-gradient(to right,#0d1b2a,#1b263b);
+         color:white;
+         padding:20px 8%;
+         display:flex;
+         justify-content:space-between;
+         align-items:center;
+         position:sticky;
+         top:0;
+         z-index:1000;
+}
+
+ .logo{
+        font-size:30px;
+        font-weight:bold;
+        color:#00b4d8;
+ }
+
+nav ul{
+        display:flex;
+        list-style:none;
+        gap:25px;
+}
+
+nav ul li a{
+        color:white;
+        text-decoration:none;
+        font-size:17px;
+        transition:0.3s;
+}
+
+nav ul li a:hover{
+        color:#00b4d8;
+}
+
+        /* HERO SECTION */
+.hero{
+        height:90vh;
+        background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        position:relative;
+}
+
+.hero::before{
+        content:'';
+        position:absolute;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+        position:relative;
+        color:white;
+        z-index:1;
+        max-width:700px;
+}
+
+.hero-content h1{
+        font-size:60px;
+        margin-bottom:20px;
+}
+
+.hero-content p{
+        font-size:20px;
+        line-height:1.6;
+        margin-bottom:30px;
+}
+
+.btn{
+        background:#00b4d8;
+        color:white;
+        padding:15px 35px;
+        border:none;
+        border-radius:30px;
+        font-size:18px;
+        cursor:pointer;
+        transition:0.3s;
+}
+
+.btn:hover{
+        background:#0077b6;
+        transform:scale(1.05);
+}
+
+        /* SECTION TITLE */
+.section-title{
+        text-align:center;
+        margin:70px 0 40px;
+}
+
+.section-title h2{
+        font-size:40px;
+        color:#1b263b;
+}
+
+        /* CAR CARDS */
+.cars-container{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        gap:30px;
+        padding:0 8% 70px;
+}
+
+.car-card{
+        background:white;
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        transition:0.4s;
+}
+
+.car-card:hover{
+        transform:translateY(-10px);
+}
+
+.car-card img{
+        width:100%;
+        height:220px;
+        object-fit:cover;
+}
+
+.car-info{
+        padding:20px;
+}
+
+.car-info h3{
+        margin-bottom:10px;
+        color:#0d1b2a;
+}
+
+.price{
+        color:#00b4d8;
+        font-size:22px;
+        font-weight:bold;
+        margin:15px 0;
+}
+
+.car-info button{
+        width:100%;
+        padding:12px;
+        border:none;
+        background:#1b263b;
+        color:white;
+        border-radius:8px;
+        cursor:pointer;
+        transition:0.3s;
+}
+
+.car-info button:hover{
+        background:#00b4d8;
+}
+
+        /* ABOUT */
+.about{
+        background:white;
+        padding:70px 8%;
+        text-align:center;
+}
+
+.about p{
+        max-width:850px;
+        margin:auto;
+        line-height:1.8;
+        font-size:18px;
+}
+
+        /* CONTACT */
+.contact{
+        background:#1b263b;
+        color:white;
+        padding:60px 8%;
+        text-align:center;
+}
+
+.contact h2{
+        margin-bottom:20px;
+        font-size:38px;
+}
+
+.contact p{
+        margin:10px 0;
+        font-size:18px;
+}
+
+footer{
+        background:#0d1b2a;
+        color:white;
+        text-align:center;
+        padding:20px;
+}
+        .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe5d;
+      transform: scale(1.1);
+    }
+
+    .whatsapp-icon {
+      width: 30px;
+      height: 30px;
+    }
+         .top-bar {
+            display: flex;
+            justify-content: flex-end; /* pushes content to the right */
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .top-bar {
+         position: fixed;
+         right: 20px;
+         top: 20px;
+        }
+
+        .price-dropdown {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 250px;
+        }
+        .slider-container {
+        position: relative;
+        max-width: 900px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .image-track {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+
+    .image-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    .image-track img {
+        width: 280px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: transform 0.3s;
+    }
+
+    .image-track img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Buttons */
+    .scroll-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.6);
+        color: white;
+        border: none;
+        padding: 12px;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 10;
+    }
+
+    .left-btn { left: 10px; }
+    .right-btn { right: 10px; }
+
+    /* Fullscreen viewer */
+    .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+    }
+
+    .lightbox.close {
+        cursor: pointer;
+    }
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+
+            .hero-content h1{
+                font-size:40px;
+            }
+
+            nav ul{
+                gap:12px;
+            }
+
+            nav ul li a{
+                font-size:14px;
+            }
+        }
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Datacrate Motors</div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="#">Auctions</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <label for="price">Select Price Range:</label><br><br>
+
+    <select id="price" class="price-dropdown">
+        <option value="">-- Choose Price Range --</option>
+        <option value="50000-150000">50,000 - 150,000</option>
+        <option value="150000-500000">150,000 - 500,000</option>
+        <option value="500000-1000000">500,000 - 1,000,000</option>
+        <option value="1000000+">Above 1,000,000</option>
+    </select>
+    <section class="filter-section">
+
+        <div class="dropdown">
+          <button class="dropdown-btn" onclick="toggleDropdown()"> Make ▼</button>
+
+          <div class="dropdown-content" id="dropdown">
+            <label><input type="checkbox" value="toyota"> Toyota</label>
+            <label><input type="checkbox" value="isuzu"> Isuzu</label>
+            <label><input type="checkbox" value="mitsubishi"> Mitsubishi</label>
+            <label><input type="checkbox" value="nissan"> Nissan</label>
+            <label><input type="checkbox" value="mercedes"> Mercedes</label>
+            <label><input type="checkbox" value="howo"> Howo</label>
+            <label><input type="checkbox" value="chevrolet"> Chevrolet</label>
+            <label><input type="checkbox" value="daihatsu"> Daihatsu</label>
+            <label><input type="checkbox" value="faw"> FAW</label>
+            <label><input type="checkbox" value="eicher"> Eicher</label>
+            <label><input type="checkbox" value="ford"> Ford</label>
+            <label><input type="checkbox" value="hino"> Hino</label>
+            <label><input type="checkbox" value="honda"> Honda</label>
+            <label><input type="checkbox" value="landrover"> Land Rover</label>
+            <label><input type="checkbox" value="mazda"> Mazda</label>
+            <label><input type="checkbox" value="peugeot"> Peugeot</label>
+            <label><input type="checkbox" value="rangerover"> Range Rover</label>
+            <label><input type="checkbox" value="scania"> Scania</label>
+            <label><input type="checkbox" value="shacman"> Shacman</label>
+            <label><input type="checkbox" value="sinotruck"> Sinotruck</label>
+            <label><input type="checkbox" value="subaru"> Subaru</label>
+            <label><input type="checkbox" value="suzuki"> Suzuki</label>
+            <label><input type="checkbox" value="tata"> Tata</label>
+            <label><input type="checkbox" value="volkswagen"> Volkswagen</label>
+          </div>
+        </div>
+
+    </section>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Drive Your Dream Car Today</h1>
+
+            <p>
+                Datacrate Motors offers quality vehicles at affordable prices.
+                Explore luxury cars, SUVs, and family vehicles from trusted auctions.
+            </p>
+
+            <button class="btn" onclick="showMessage()">
+                Explore Cars
+            </button>
+        </div>
+    </section>
+    <div class="section-title">
+        <h2>Today's deal</h2>
+    </div>
+
+ <section class="cars-container">
+ <div class="slider-container">
+    <div class="car-card" data-make="Mercedes"></div>
+    <button class="scroll-btn left-btn" onclick="scrollLeft()">❮</button>
+
+        <div class="image-track" id="slider">
+         <img src="benz 1.jpeg" onclick="openImage(this.src)">
+         <img src="benz 2.jpeg" onclick="openImage(this.src)">
+         <img src="benz 3.jpeg" onclick="openImage(this.src)">
+         <img src="benz 4.jpeg" onclick="openImage(this.src)">
+         <img src="benz 5.jpeg" onclick="openImage(this.src)">
+        </div>
+        <div class="car-info">
+         <h3>Mercedes Benz ML250</h3>
+         <p>2143CC Automatic Diesel Mileage-202,000</p>
+         <div class="price">ksh 2.65M</div>
+
+        </div>
+
+
+    <button class="scroll-btn right-btn" onclick="scrollRight()">❯</button>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+    <img id="lightbox-img">
+</div>
+<section class="cars-container">
+ <div class="slider-container">
+    <div class="car-card" data-make="Toyota"></div>
+    <button class="scroll-btn left-btn" onclick="scrollLeft()">❮</button>
+
+        <div class="image-track" id="slider">
+         <img src="harrier 1.jpeg" onclick="openImage(this.src)">
+         <img src="harrier 2.jpeg" onclick="openImage(this.src)">
+         <img src="harrier 3.jpeg" onclick="openImage(this.src)">
+         <img src="harrier 4.jpeg" onclick="openImage(this.src)">
+         <img src="harrier 6.jpeg" onclick="openImage(this.src)">
+        </div>
+        <div class="car-info">
+         <h3>Toyota harrier</h3>
+         <p>2360CC Automatic Petrol</p>
+         <div class="price">ksh 1.35m</div>
+
+        </div>
+
+
+    <button class="scroll-btn right-btn" onclick="scrollRight()">❯</button>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+    <img id="lightbox-img">
+</div>
+<section class="cars-container">
+ <div class="slider-container">
+    <div class="car-card" data-make="Jeep"></div>
+    <button class="scroll-btn left-btn" onclick="scrollLeft()">❮</button>
+
+        <div class="image-track" id="slider">
+         <img src="jeep 1.jpeg" onclick="openImage(this.src)">
+         <img src="jeep 2.jpeg" onclick="openImage(this.src)">
+         <img src="jeep 3.jpeg" onclick="openImage(this.src)">
+         <img src="jeep 4.jpeg" onclick="openImage(this.src)">
+         
+        </div>
+        <div class="car-info">
+         <h3>Jeep Wrangler</h3>
+         <p>Automatic Petrol YOM2012</p>
+         <div class="price">ksh 2.35M</div>
+
+        </div>
+
+
+    <button class="scroll-btn right-btn" onclick="scrollRight()">❯</button>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+    <img id="lightbox-img">
+</div>
+
+
+</section>
+<a href="https://wa.me/254720331365?text=Hello@datacratemotors%20I%20am%20interested%20in%20your%20cars"
+   class="whatsapp-float"
+   target="_blank">
+
+   <!-- WhatsApp SVG Icon -->
+   <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+     <path fill="white"
+       d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.89.757 5.604 2.074 7.955L0 32l7.853-2.053A15.9 15.9 0 0016 32c8.836 0 16-7.164 16-16S24.836.396 16 .396zm0 29.13c-2.615 0-5.053-.764-7.11-2.073l-.51-.305-4.66 1.22 1.244-4.544-.33-.525A13.36 13.36 0 012.64 16.4c0-7.36 5.99-13.35 13.36-13.35s13.36 5.99 13.36 13.35-5.99 13.35-13.36 13.35zm7.39-9.98c-.405-.203-2.397-1.183-2.767-1.317-.37-.136-.64-.203-.91.203-.27.405-1.046 1.317-1.283 1.59-.236.27-.472.304-.877.101-.405-.203-1.71-.63-3.257-2.008-1.203-1.074-2.014-2.397-2.25-2.802-.236-.405-.025-.623.178-.825.182-.181.405-.472.607-.708.203-.236.27-.405.405-.674.136-.27.068-.506-.034-.708-.101-.203-.91-2.195-1.246-3.003-.327-.785-.66-.678-.91-.69l-.775-.014c-.27 0-.708.101-1.08.506-.37.405-1.417 1.384-1.417 3.372 0 1.987 1.451 3.905 1.654 4.176.203.27 2.86 4.37 6.926 6.13.968.417 1.723.666 2.312.852.971.308 1.856.265 2.556.161.78-.116 2.397-.979 2.737-1.924.338-.946.338-1.757.236-1.924-.101-.169-.37-.27-.775-.473z"/>
+   </svg>
+   
+
+</a>
+    <script>
+        function showMessage(){
+            alert("Welcome to Datacrate Motors! Browse our latest car collection.");
+        }
+    </script>
+    <script>
+      const priceSelect = document.getElementById("price");
+
+      priceSelect.addEventListener("change", function() {
+        console.log("Selected range:", this.value);
+     });
+    </script>
+
+    <!-- CONTACT -->
+    <div class="contact">
+        <h2>Contact Us</h2>
+
+        <p>📞 Phone: 0720 33 13 65</p>
+        <p>📧 Email: info@datacratemotors.com</p>
+        <p>📍 Location: Nairobi, Kenya</p>
+    </div>
+
+    <!-- FOOTER -->
+<footer>
+        <p>© 2026 Datacrate Motors. All Rights Reserved.</p>
+</footer>
+ 
+
+</section>
+
+<script>
+// DROPDOWN
+function toggleDropdown(){
+    const dropdown = document.getElementById("dropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+}
+
+// SEARCH + FILTER
+const searchInput = document.getElementById("searchInput");
+const checkboxes = document.querySelectorAll(".dropdown-content input");
+const cars = document.querySelectorAll(".car-card");
+
+searchInput.addEventListener("input", filterCars);
+checkboxes.forEach(cb => cb.addEventListener("change", filterCars));
+
+function filterCars(){
+
+    const searchValue = searchInput.value.toLowerCase();
+
+    let selectedMakes = [];
+    checkboxes.forEach(cb => {
+        if(cb.checked){
+            selectedMakes.push(cb.value);
+        }
+    });
+
+    cars.forEach(car => {
+
+        const name = car.dataset.name;
+        const make = car.dataset.make;
+
+        const matchesSearch = name.includes(searchValue);
+        const matchesMake = selectedMakes.length === 0 || selectedMakes.includes(make);
+
+        if(matchesSearch && matchesMake){
+            car.classList.remove("hidden");
+        } else {
+            car.classList.add("hidden");
+        }
+    });
+}
+</script>
+<script>
+const slider = document.getElementById("slider");
+
+/* Scroll buttons */
+function scrollLeft() {
+    slider.scrollBy({ left: -300, behavior: "smooth" });
+}
+
+function scrollRight() {
+    slider.scrollBy({ left: 300, behavior: "smooth" });
+}
+
+/* Auto slide */
+setInterval(() => {
+    slider.scrollBy({ left: 300, behavior: "smooth" });
+
+    // Reset to start if end reached
+    if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+        slider.scrollTo({ left: 0, behavior: "smooth" });
+    }
+}, 3000);
+
+/* Lightbox */
+function openImage(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeImage() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+/* Touch swipe */
+let startX = 0;
+
+slider.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+});
+
+slider.addEventListener("touchend", e => {
+    let endX = e.changedTouches[0].clientX;
+
+    if (startX > endX + 50) {
+        scrollRight();
+    } else if (startX < endX - 50) {
+        scrollLeft();
+    }
+});
+</script>
+
+
+</body>
+</html>
